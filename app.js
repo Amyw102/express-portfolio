@@ -1,3 +1,12 @@
+/*
+  File name  : app.js
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: Main Express application entry point. Sets up the view engine,
+               static assets, middleware, and mounts the site routers.
+*/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
