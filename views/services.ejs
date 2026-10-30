@@ -1,0 +1,54 @@
+<!--
+  File name  : services.ejs
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: Services page - a short list of services I offer with icons and
+               supporting images.
+-->
+<% var title = 'Services'; %>
+<%- include('partials/header', { currentPage: 'services' }) %>
+
+<!-- ======= Services Section ======= -->
+<main>
+  <section class="container section">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">A few services I can offer to help bring your ideas to life.</p>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="service-icon"><i class="bi bi-browser-chrome"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">Building responsive and user-friendly websites using HTML, CSS, Bootstrap and Express.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">General Programming</h5>
+            <p class="card-text">Writing clean, well-documented code in languages such as JavaScript, Python and SQL.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <div class="service-icon"><i class="bi bi-phone"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Mobile-Friendly Apps</h5>
+            <p class="card-text">Designing applications that look and work well on phones, tablets and desktops.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- ======= End Services Section ======= -->
+
+<%- include('partials/footer') %>

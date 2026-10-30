@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Placeholder image for Project 1: Task Manager App -->
+  <rect width="400" height="300" fill="#4a9eda"/>
+  <rect x="40" y="50" width="120" height="80" rx="8" fill="#ffffff" opacity="0.9"/>
+  <rect x="40" y="145" width="320" height="30" rx="6" fill="#ffffff" opacity="0.5"/>
+  <rect x="40" y="185" width="280" height="30" rx="6" fill="#ffffff" opacity="0.5"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Task Manager</text>
+</svg>

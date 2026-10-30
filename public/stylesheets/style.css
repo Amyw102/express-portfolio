@@ -1,0 +1,297 @@
+/*
+  File name  : style.css
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: Custom styles for the Express portfolio site. A modern, layered
+               design with a primary indigo palette, gradient accents and
+               subtle motion so the site does not feel flat or one-note.
+*/
+
+/* ======= CSS Variables (design tokens) ======= */
+:root {
+  --primary: #4338ca;      /* main indigo */
+  --primary-dark: #312e81; /* darker indigo for gradients */
+  --accent: #22d3ee;       /* cyan accent */
+  --accent-2: #a78bfa;     /* violet accent */
+  --light-bg: #f4f6fb;
+  --dark-text: #1e293b;
+  --muted-text: #64748b;
+  --card-shadow: 0 6px 20px rgba(30, 41, 59, 0.08);
+  --card-shadow-hover: 0 14px 30px rgba(30, 41, 59, 0.16);
+  --radius: 14px;
+}
+
+/* ======= Global / Base Styles ======= */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", "PingFang SC", Helvetica, Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ======= Navigation Bar ======= */
+.site-navbar {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+.site-logo {
+  height: 38px;
+  width: 38px;
+  margin-right: 8px;
+  border-radius: 10px;          /* rounded badge so the star blends with the navbar */
+  object-fit: cover;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+.navbar-nav .nav-link {
+  color: #c7d2fe;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ======= Hero (Home) Section ======= */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #6d28d9 100%);
+  color: #ffffff;
+  padding: 90px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+/* decorative floating blobs to add depth */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(40px);
+}
+.hero::before {
+  width: 300px;
+  height: 300px;
+  background: var(--accent);
+  top: -80px;
+  right: -60px;
+}
+.hero::after {
+  width: 260px;
+  height: 260px;
+  background: var(--accent-2);
+  bottom: -90px;
+  left: -50px;
+}
+.hero h1 {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.hero .lead {
+  color: #dbeafe;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.hero-divider {
+  width: 70px;
+  margin: 22px auto;
+  border-top: 3px solid var(--accent);
+  opacity: 1;
+}
+.mission {
+  font-style: italic;
+  color: #e0e7ff;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* ======= Overview Cards (Home) ======= */
+.overview {
+  margin-top: -45px;
+}
+.overview-card {
+  border: none;
+  border-radius: var(--radius);
+  background: #ffffff;
+  color: var(--dark-text);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+.overview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+.overview-card .icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+.icon-badge.indigo { background: #e0e7ff; color: var(--primary); }
+.icon-badge.cyan   { background: #cffafe; color: #0891b2; }
+.icon-badge.violet { background: #ede9fe; color: #7c3aed; }
+.overview-card .card-title {
+  color: var(--dark-text);
+  font-weight: 700;
+}
+
+/* ======= General Sections ======= */
+.section {
+  padding: 60px 0;
+}
+.section-title {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.section-sub {
+  text-align: center;
+  color: var(--muted-text);
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+
+/* ======= About Page ======= */
+.profile-wrap {
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+}
+.profile-photo {
+  max-width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= Projects Page ======= */
+.project-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+.project-image {
+  height: 100%;
+  object-fit: cover;
+}
+.project-card .role-tag {
+  display: inline-block;
+  background: #e0e7ff;
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ======= Services Page ======= */
+.service-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+.service-icon {
+  font-size: 2.6rem;
+  padding-top: 24px;
+  color: var(--primary);
+}
+.service-image {
+  padding: 16px;
+}
+
+/* ======= Contact Page ======= */
+.contact-panel,
+.form-panel {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+.contact-panel {
+  background: linear-gradient(160deg, var(--primary), var(--primary-dark));
+  color: #ffffff;
+}
+.contact-panel .card-title {
+  color: #ffffff;
+}
+.contact-panel li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.contact-panel li:last-child {
+  border-bottom: none;
+}
+.contact-panel li strong {
+  color: var(--accent);
+}
+.form-panel .card-title {
+  color: var(--primary-dark);
+}
+.form-control {
+  border-radius: 8px;
+  border-color: #dbe3f0;
+}
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(67, 56, 202, 0.15);
+}
+
+/* ======= Buttons & Footer ======= */
+.btn-cta {
+  background: linear-gradient(90deg, var(--primary), var(--accent-2));
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(67, 56, 202, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(67, 56, 202, 0.4);
+  color: #ffffff;
+}
+.btn-outline-light {
+  border-radius: 24px;
+}
+.site-footer {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: #c7d2fe;
+  padding: 22px 0;
+  margin-top: 40px;
+}
+.site-footer strong {
+  color: #ffffff;
+}

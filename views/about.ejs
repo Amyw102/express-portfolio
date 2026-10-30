@@ -1,0 +1,53 @@
+<!--
+  File name  : about.ejs
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: About page - legal name, profile photo, a short introduction, a
+               skills list and a link to a PDF version of the resume.
+-->
+<% var title = 'About'; %>
+<%- include('partials/header', { currentPage: 'about' }) %>
+
+<!-- ======= About Section ======= -->
+<main>
+  <section class="container section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">A little background on who I am and what I like to work on.</p>
+
+    <div class="profile-wrap">
+      <div class="row align-items-center g-4">
+        <!-- Profile photo (head and shoulders) -->
+        <div class="col-md-4 text-center">
+          <img src="/images/profile.jpg" alt="Photo of Yi Wu" class="profile-photo img-fluid">
+        </div>
+        <!-- Personal introduction -->
+        <div class="col-md-8">
+          <h3>Yi Wu</h3>
+          <p>
+            I am a third-year student at Suzhou Centennial College, majoring in
+            Software Technology and expected to graduate in 2027. I enjoy building
+            responsive websites and am always learning new technologies. I am
+            detail-oriented and focused on improving the quality of my work.
+          </p>
+          <!-- Key skills -->
+          <h5 class="mt-3">Skills</h5>
+          <div class="mb-3">
+            <span class="badge rounded-pill text-bg-primary me-1">HTML &amp; CSS</span>
+            <span class="badge rounded-pill text-bg-primary me-1">JavaScript</span>
+            <span class="badge rounded-pill text-bg-primary me-1">Bootstrap</span>
+            <span class="badge rounded-pill text-bg-primary me-1">Node.js</span>
+            <span class="badge rounded-pill text-bg-primary me-1">SQL</span>
+          </div>
+          <!-- Link to PDF version of the resume -->
+          <a href="/images/resume.pdf" class="btn btn-cta" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-pdf me-1"></i>Download My Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- ======= End About Section ======= -->
+
+<%- include('partials/footer') %>

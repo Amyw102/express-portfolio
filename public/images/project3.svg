@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Placeholder image for Project 3: Weather Info App -->
+  <rect width="400" height="300" fill="#9ac8e8"/>
+  <circle cx="280" cy="80" r="45" fill="#ffd166"/>
+  <circle cx="120" cy="120" r="50" fill="#ffffff" opacity="0.9"/>
+  <path d="M20 300 C80 180 180 210 230 140 C280 80 340 120 380 300 Z" fill="#ffffff" opacity="0.6"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="20" fill="#1f2a44" text-anchor="middle" font-weight="bold">Weather App</text>
+</svg>

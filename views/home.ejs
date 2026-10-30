@@ -1,0 +1,66 @@
+<!--
+  File name  : home.ejs
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: Home page - welcome message, mission statement, a quick skills
+               strip and a call-to-action button that redirects to the About page.
+-->
+<% var title = 'Home'; %>
+<%- include('partials/header', { currentPage: 'home' }) %>
+
+<!-- ======= Home / Hero Section ======= -->
+<main>
+  <section class="hero">
+    <div class="container text-center position-relative">
+      <h1 class="display-4">Welcome to My Portfolio</h1>
+      <p class="lead">Hi, I'm Yi Wu &mdash; a student developer passionate about building clean, useful web applications.</p>
+      <hr class="hero-divider">
+      <!-- Mission Statement -->
+      <blockquote class="mission">
+        "My mission is to turn ideas into simple, reliable and user-friendly software that makes everyday life easier."
+      </blockquote>
+      <!-- Call-to-action button linking to the About page -->
+      <a href="/about" class="btn btn-lg btn-cta mt-3">Learn More About Me <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </section>
+
+  <!-- Quick skills strip -->
+  <section class="container overview">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card overview-card">
+          <div class="card-body text-center">
+            <div class="icon-badge indigo mx-auto"><i class="bi bi-folder2-open"></i></div>
+            <h5 class="card-title">Projects</h5>
+            <p class="card-text">A look at some of the projects I have built or contributed to.</p>
+            <a href="/projects" class="btn btn-outline-primary btn-sm rounded-pill">View Projects</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card overview-card">
+          <div class="card-body text-center">
+            <div class="icon-badge cyan mx-auto"><i class="bi bi-grid-1x2"></i></div>
+            <h5 class="card-title">Services</h5>
+            <p class="card-text">The services I offer, from web development to programming.</p>
+            <a href="/services" class="btn btn-outline-primary btn-sm rounded-pill">See Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card overview-card">
+          <div class="card-body text-center">
+            <div class="icon-badge violet mx-auto"><i class="bi bi-person-lines-fill"></i></div>
+            <h5 class="card-title">Contact</h5>
+            <p class="card-text">Get in touch with me through the contact form.</p>
+            <a href="/contact" class="btn btn-outline-primary btn-sm rounded-pill">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- ======= End Home Section ======= -->
+
+<%- include('partials/footer') %>

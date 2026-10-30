@@ -1,0 +1,74 @@
+<!--
+  File name  : contact.ejs
+  Student    : Wu Yi
+  Student ID : 2024110099
+  Date       : 2026-10-29
+  Description: Contact page - a contact information panel plus a short interactive
+               form. On submit the form POSTs to the server which captures the data
+               and redirects back to the Home page.
+-->
+<% var title = 'Contact'; %>
+<%- include('partials/header', { currentPage: 'contact' }) %>
+
+<!-- ======= Contact Section ======= -->
+<main>
+  <section class="container section">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="row g-4">
+      <!-- Contact information panel -->
+      <div class="col-md-5">
+        <div class="card contact-panel">
+          <div class="card-body">
+            <h5 class="card-title">Contact Information</h5>
+            <ul class="list-unstyled mb-0">
+              <li><strong>Name:</strong> Yi Wu</li>
+              <li><strong>Email:</strong> wuamy646@gmail.com</li>
+              <li><strong>Phone:</strong> 18012929976</li>
+              <li><strong>Location:</strong> Nanjing, China</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive contact form -->
+      <div class="col-md-7">
+        <div class="card form-panel">
+          <div class="card-body">
+            <h5 class="card-title">Send Me a Message</h5>
+            <form action="/contact" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Contact Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- ======= End Contact Section ======= -->
+
+<%- include('partials/footer') %>

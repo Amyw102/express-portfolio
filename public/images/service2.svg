@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180" viewBox="0 0 300 180">
+  <!-- Placeholder image for Service 2: General Programming -->
+  <rect width="300" height="180" fill="#eef3fb"/>
+  <rect x="40" y="30" width="220" height="120" rx="6" fill="#1f2a44"/>
+  <text x="150" y="80" font-family="Consolas, monospace" font-size="22" fill="#4a9eda" text-anchor="middle">&lt;/&gt;</text>
+  <text x="150" y="115" font-family="Consolas, monospace" font-size="14" fill="#ffffff" text-anchor="middle">CODE</text>
+</svg>
